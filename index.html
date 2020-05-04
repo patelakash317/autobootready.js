@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Autobootready</title>
+		<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/autobootready/css/autobootready.css" rel="stylesheet">
+    <style type="text/css">
+      .boxport{
+        width: 35%;
+        float: left;
+      }
+      .fullboxport{
+        width: 100%;
+        float: left;
+      }
+    </style>
+
+    <!-- credit -->
+      <style>
+        * {
+          font-family: Verdana, Arial, sans-serif;
+        }
+        a:link {
+          color:#000;
+          text-decoration: none;
+        }
+        a:visited {
+          color:#000;
+        }
+        a:hover {
+          color:#33F;
+        }
+        .credits{
+          width: inherit; 
+          text-align: center; 
+          margin-top: 10px; 
+          position: fixed; 
+          top: 100px;
+          /*bottom: 0;*/
+        }
+        .action_credits{
+          background: #ddd;
+          position: fixed;
+          /*right: 0;*/
+          top: 0;
+          width: 500px;
+          height: 100%;
+          padding: 10px;
+
+          right: -500px;
+          transition: all 0.55s ease-in-out;
+        }
+        .action_credits.showing{
+          right: 0px;
+          transition: all 0.55s ease-in-out;
+        }
+        .btnca{
+          transform: rotate(270deg);
+          /*position: relative;
+          right: 69px;
+          top: 11px;*/
+          position: absolute;
+          right: 477px;
+          top: 21px;
+          border-radius: 0;
+        }
+        .webduplexnote{
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          padding-left: 5px;
+          padding-bottom: 5px;
+          margin: 0;
+          background-color: #ffffff;
+        }
+      </style>
+    <!-- credit ends -->
+	</head>
+	<body>
+		<form method="post" action="masters/addNew" id="frmAddNew" name="frmAddNew"> 
+      <div class="boxport">
+        <div>
+          <label for="txtname">Name<sup>*</sup></label>
+          <input type="text" class="" id="txtname" name="txtname" autofocus>
+        </div>
+        <div>
+          <label for="txtlast">Last name<sup>*</sup></label>
+          <input type="text" id="txtlast" name="txtlast">
+        </div>
+        <div>
+          <label>Gender</label>
+          <input type="radio" id="txtgenderm" name="txtgen" value="m">Male<br/>
+          <input type="radio" id="txtgenderf" name="txtgen" value="f">Female<br/>
+        </div>
+        <div>
+          <label>Color</label>
+          <input type="radio" id="txtcolorr" name="txtcol" value="r"><label for="txtgender">Red</label>
+          <input type="radio" id="txtcolorb" name="txtcol" value="b"><label for="txtgender">Blue</label>
+        </div>
+        <div>
+          <label>Check</label>
+          <input type="checkbox" id="txtcheck1" name="txtcheck1" value="c1">Check 1<br/>
+          <input type="checkbox" id="txtcheck2" name="txtcheck2" value="c2">Check 2<br/>
+        </div>
+        <div>
+          <label>Holiday</label>
+          <input type="checkbox" id="txtmon" name="txtmon" value="mon"><label for="txtmon">Monday</label>
+          <input type="checkbox" id="txttue" name="txttue" value="tue"><label for="txttue">Tuesday</label>
+        </div>
+        <div>
+          <label for="txthobs">Hobs<sup>*</sup></label>
+          <input type="text" id="txthobs" name="txthobs">
+        </div>
+        <div>
+          <label for="btngetcurloc">Select<sup>*</sup></label>
+          <select>
+            <option>Opt 1</option>
+            <option>Opt 2</option>
+          </select>
+          <button type="button" id="btngetcurloc">Update</button>
+        </div>
+        <div>
+          <label for="txtaddress">Address<sup>*</sup></label>
+          <textarea id="txtaddress" name="txtaddress" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="fullboxport">
+        <button type="submit" id="btnSave">Save</button>        
+        <button type="button">Cancel</button>
+      </div>
+    </form>
+
+    <div class="action_credits">
+      <button class="btnca btn btn-primary" onclick="showCredits()">Actions</button>
+      <div class="sendleft center">
+        <div class="credits">
+          <div class="center" id="headline"><a href="https://github.com/patelakash317/autobootready.js">Autobootready.js <br/>Automatic bootstrap ready plugin</a> demonstration</div>Akash Patel [@patelakash317]
+        </div>
+      </div>
+    </div>
+
+		<script type="text/javascript" src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/autobootready/js/autobootready.min.js"></script>
+
+    <script>
+      // additional function
+        function showCredits(){
+          // console.log(document.getElementsByClassName('showing'))
+          if($('.action_credits').hasClass('showing')){
+            // console.log('hiding');
+            $('.action_credits').removeClass("showing");
+
+            $('.btnca').html('Actions');
+            $('.btnca').removeClass('btn-danger');
+            $('.btnca').addClass('btn-primary');
+          } else {
+            // console.log('un-hiding');
+            $('.action_credits').addClass("showing");
+            
+            $('.btnca').html('&nbsp; Hide&nbsp;');
+            $('.btnca').addClass('btn-danger');
+            $('.btnca').removeClass('btn-primary');
+          }
+        }
+      // additional function ensd
+    </script>
+	</body>
+</html>
