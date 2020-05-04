@@ -1,7 +1,7 @@
 **Welcome to Autobootready.js - Auto bootstrap ready plugin**
 Easiest and quickest way to transform any simple html page to Generation Z Bootstrap ready web page.
 
-Demo: https://patelakash317.github.io/autobootready.js
+Demo: https://patelakash317.github.io/autobootready
 
 For any issues or help relating to implementation: write us at https://github.com/patelakash317/autobootready.js/issues
 
