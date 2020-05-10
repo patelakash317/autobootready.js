@@ -14,6 +14,10 @@
         width: 100%;
         float: left;
       }
+      body{
+        padding: 15px;
+        display: flow-root;
+      }
     </style>
 
     <!-- credit -->
@@ -38,6 +42,11 @@
           position: fixed; 
           top: 100px;
           /*bottom: 0;*/
+
+          /*right: 4%;*/
+          width: 500px;
+          /*right: 0;*/
+          transition: all 0.55s ease-in-out;
         }
         .action_credits{
           background: #ddd;
@@ -48,8 +57,15 @@
           height: 100%;
           padding: 10px;
 
+          border-left: 3px solid #000;
           right: -500px;
           transition: all 0.55s ease-in-out;
+        }
+        .action_credits .footer{
+          text-align: center;
+          position: absolute;
+          bottom: 0;
+          padding: 12px;
         }
         .action_credits.showing{
           right: 0px;
@@ -132,15 +148,18 @@
     </form>
 
     <div class="action_credits">
-      <button class="btnca btn btn-primary" onclick="showCredits()">Actions</button>
+      <button class="btnca btn btn-primary" id="btnaction_credits" onclick="showCredits()">Source</button>
       <div class="sendleft center">
         <div class="credits">
-          <div class="center" id="headline"><a href="https://github.com/patelakash317/autobootready.js">Autobootready.js <br/>Automatic bootstrap ready plugin</a> demonstration</div>Akash Patel [@patelakash317]
+          <div class="center" id="headline"><a href="https://github.com/patelakash317/autobootready.js"><h4 class="m-0">Autobootready.js</h4><!--  <br/> -->Automatic bootstrap ready plugin</a> demonstration</div>
+        </div>
+        <div class="footer">
+          Automated web styling script to upgrade or quick start from simple HTML elements to Bootstrap based elements<br/><br/><a href="https://www.linkedin.com/in/patelakash317">Akash Patel</a> [<a href="https://twitter.com/patelakash317">@patelakash317</a>]<br/>
         </div>
       </div>
     </div>
 
-		<script type="text/javascript" src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+		<script type="text/javascript" src="./assets/js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="./assets/js/popper.min.js"></script>
     <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./assets/autobootready/js/autobootready.min.js"></script>
